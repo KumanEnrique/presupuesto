@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Presupuesto</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/4.3.1/flatly/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="offset-lg-3 col-md-5 col-xs-12">
+                <div class="card border-0">
+                    <h2 id="fecha">CARTERA DEL 2%%%</h2>
+                    <h2 class="align-self-center" id="display">+50</h2>
+                    <div class="bg-success text-white d-flex justify-content-around">
+                        <p>Entrada</p>
+                        <p id="totalEntrada">$100.00</p>
+                    </div>
+                    <div class="bg-danger text-white d-flex justify-content-around">
+                        <p>Gastos</p>
+                        <p id="totalSalida">$30.00</p>
+                    </div>
+                    <p id="anterior-p"></p>
+                </div>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="offset-lg-4 col-lg-3 d-flex justify-content-center">
+                <div class="card bg-light text-dark">
+                    <form id="form">
+                        <div class="form-group">
+                            <div class="input-group mb-3">
+                                <select class="custom-select" id="select">
+                                    <option value="Entrada">Entrada</option>
+                                    <option value="Salida">Salida</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="descripcion" class="form-control" placeholder="Descripcion" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" id="valor" placeholder="Valor" class="form-control" required step=".1">
+                        </div>
+                        <button class="btn btn-primary">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <button class="btn btn-danger" id="eliminar">Eliminar todo</button>
+        </div>
+        
+        <div class="row" id="contenido">
+            <div class="offset-lg-2 col-lg-4 ">
+                <div class="card border-0">
+                    <div class="card-body">
+                        <h3>Entrada</h3>
+                        <ul class="list-group" id="listaEntrada">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 ">
+                <div class="card border-0">
+                    <div class="card-body">
+                        <h3>Salida</h3>
+                        <ul class="list-group" id="listaSalida">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
